@@ -1,0 +1,89 @@
+<nav [ngClass]="{
+      'bg-white shadow-md': scrolled,
+      'bg-transparent': !scrolled
+    }"
+    class="fixed w-full top-0 left-0 z-50 transition-all duration-500 ease-in-out backdrop-blur-md">
+    
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a routerLink="/" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Company Logo" class="h-10 w-10">
+          <!-- <span class="font-semibold text-xl text-blue-600">EraSoft</span> -->
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">Home</a>
+        <a routerLink="/about" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">About</a>
+
+        <!-- Dropdown -->
+        <div class="relative group" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+          <button class="flex items-center hover:text-blue-500 font-medium focus:outline-none">
+            Services
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <!-- Dropdown Items -->
+          <div *ngIf="showDropdown"
+               class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-lg shadow-lg py-2 z-50 transition-all duration-300">
+            <a routerLink="/services/web" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Web Development</a>
+            <a routerLink="/services/mobile" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Mobile Apps</a>
+            <a routerLink="/services/uiux" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">UI/UX Design</a>
+            <a routerLink="/services/cloud" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600">Cloud Solutions</a>
+          </div>
+        </div>
+
+        <a routerLink="/careers" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">Careers</a>
+        <a routerLink="/contact" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMenu()" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path *ngIf="!isOpen" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path *ngIf="isOpen" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isOpen" class="md:hidden bg-white border-t border-gray-100">
+    <div class="flex flex-col px-4 py-3 space-y-2">
+      <a routerLink="/" class="hover:text-blue-600 font-medium" (click)="toggleMenu()">Home</a>
+      <a routerLink="/about" class="hover:text-blue-600 font-medium" (click)="toggleMenu()">About</a>
+
+      <!-- Mobile Dropdown -->
+      <div>
+        <button (click)="toggleDropdown()" class="w-full text-left hover:text-blue-600 font-medium flex items-center justify-between">
+          Services
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path *ngIf="!dropdownOpen" d="M6 9l6 6 6-6"></path>
+            <path *ngIf="dropdownOpen" d="M6 15l6-6 6 6"></path>
+          </svg>
+        </button>
+
+        <div *ngIf="dropdownOpen" class="pl-4 mt-2 flex flex-col space-y-1">
+          <a routerLink="/services/web" class="hover:text-blue-600" (click)="toggleMenu()">Web Development</a>
+          <a routerLink="/services/mobile" class="hover:text-blue-600" (click)="toggleMenu()">Mobile Apps</a>
+          <a routerLink="/services/uiux" class="hover:text-blue-600" (click)="toggleMenu()">UI/UX Design</a>
+          <a routerLink="/services/cloud" class="hover:text-blue-600" (click)="toggleMenu()">Cloud Solutions</a>
+        </div>
+      </div>
+
+      <a routerLink="/careers" class="hover:text-blue-600 font-medium" (click)="toggleMenu()">Careers</a>
+      <a routerLink="/contact" class="hover:text-blue-600 font-medium" (click)="toggleMenu()">Contact</a>
+    </div>
+  </div>
+</nav>

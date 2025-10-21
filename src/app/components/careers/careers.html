@@ -1,0 +1,112 @@
+<!-- careers.component.html -->
+<div class="bg-gray-50 min-h-screen">
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Join Our Team</h1>
+      <p class="text-lg md:text-xl">We are looking for talented individuals to help us grow.</p>
+      <a href="#openings" class="mt-6 inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">View Openings</a>
+    </div>
+  </section>
+
+  <!-- Job Openings Section -->
+  <section id="openings" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Current Openings</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Job Card -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Software Developer</h3>
+          <p class="text-gray-600 mb-4">Full-time | IT Department</p>
+          <ul class="text-gray-600 mb-4 list-disc list-inside">
+            <li>Develop and maintain web applications</li>
+            <li>Collaborate with cross-functional teams</li>
+            <li>Write clean, scalable code</li>
+          </ul>
+          <a href="#apply" class="text-indigo-600 font-semibold hover:underline">Apply Now →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">UI/UX Designer</h3>
+          <p class="text-gray-600 mb-4">Full-time | Design Team</p>
+          <ul class="text-gray-600 mb-4 list-disc list-inside">
+            <li>Create wireframes and prototypes</li>
+            <li>Design user-friendly interfaces</li>
+            <li>Collaborate with developers</li>
+          </ul>
+          <a href="#apply" class="text-indigo-600 font-semibold hover:underline">Apply Now →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">HR Executive</h3>
+          <p class="text-gray-600 mb-4">Full-time | HR Department</p>
+          <ul class="text-gray-600 mb-4 list-disc list-inside">
+            <li>Manage recruitment processes</li>
+            <li>Maintain employee records</li>
+            <li>Assist with training programs</li>
+          </ul>
+          <a href="#apply" class="text-indigo-600 font-semibold hover:underline">Apply Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Growth Opportunities</h3>
+          <p class="text-gray-600">We support your personal and professional development.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Inclusive Culture</h3>
+          <p class="text-gray-600">We value diversity and inclusion in our workplace.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Flexible Work</h3>
+          <p class="text-gray-600">Enjoy a healthy work-life balance with flexible hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Section -->
+  <section id="apply" class="py-20">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-3xl font-bold text-center mb-8">Apply Now</h2>
+      <form class="bg-white p-8 rounded-lg shadow space-y-4">
+        <div>
+          <label class="block text-gray-700 mb-2">Full Name</label>
+          <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-2">Email</label>
+          <input type="email" placeholder="Your Email" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-2">Position</label>
+          <select class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            <option>Software Developer</option>
+            <option>UI/UX Designer</option>
+            <option>HR Executive</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-700 mb-2">Resume</label>
+          <input type="file" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" />
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section class="bg-indigo-600 text-white py-12 text-center">
+    <h3 class="text-2xl font-bold mb-4">Ready to join us?</h3>
+    <a href="#apply" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Apply Today</a>
+  </section>
+
+</div>
