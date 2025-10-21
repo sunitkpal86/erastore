@@ -17,7 +17,7 @@
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a routerLink="/" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">Home</a>
+        <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">Home</a>
         <a routerLink="/about" routerLinkActive="text-blue-600" class="hover:text-blue-500 font-medium">About</a>
 
         <!-- Dropdown -->
